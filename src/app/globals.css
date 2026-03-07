@@ -1,26 +1,64 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-heading: "Gilda Display", serif;
+  --font-body: "Inder", sans-serif;
+
+  --color-navy: #1B325F;
+  --color-navy-dark: #152847;
+  --color-navy-light: #2A4A80;
+  --color-white: #FFFFFF;
+  --color-gold: #E2D099;
+  --color-gold-dark: #C4B577;
+  --color-gold-light: #EDE4C4;
+  --color-turquoise: #5EC8CC;
+  --color-turquoise-light: #E8F7F8;
+  --color-gray: #4A5568;
+  --color-gray-light: #F7F8FA;
+  --color-gray-border: #E2E8F0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  color: var(--color-navy);
+  background-color: var(--color-white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+::selection {
+  background-color: var(--color-gold);
+  color: var(--color-navy);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out forwards;
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, var(--color-gold), var(--color-gold-dark));
 }
