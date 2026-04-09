@@ -1,5 +1,6 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -20,47 +21,70 @@ function AttractionsContent() {
   const t = useTranslations("attractions");
 
   const attractions = [
-    { key: "italiaInMiniatura", icon: "🏛️" },
-    { key: "mirabilandia", icon: "🎢" },
-    { key: "fiabilandia", icon: "🧚" },
-    { key: "aquafan", icon: "🌊" },
-    { key: "oltremare", icon: "🐬" },
-    { key: "centroStorico", icon: "🏰" },
-    { key: "fiera", icon: "📊" },
-    { key: "ceccarini", icon: "🛍️" },
-    { key: "nightlife", icon: "🎵" },
-    { key: "parks", icon: "🌿" },
+    "italiaInMiniatura",
+    "mirabilandia",
+    "fiabilandia",
+    "aquafan",
+    "oltremare",
+    "centroStorico",
+    "fiera",
+    "ceccarini",
+    "nightlife",
+    "parks",
   ] as const;
 
   return (
     <>
-      <section className="relative min-h-[60vh] flex items-center justify-center bg-navy">
-        <div className="absolute inset-0 bg-gradient-to-b from-navy-dark/80 to-navy/90 z-10" />
-        <div className="relative z-20 text-center px-4 pt-24">
-          <p className="text-gold uppercase tracking-[0.3em] text-sm mb-4 font-body">{t("subtitle")}</p>
-          <h1 className="font-heading text-white text-4xl md:text-6xl lg:text-7xl">{t("title")}</h1>
+      {/* Hero */}
+      <section className="relative h-[70vh] flex items-end overflow-hidden bg-navy">
+        <Image
+          src="/images/hotel-esterno-notte.png"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover opacity-25"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-navy/60" />
+        <div className="relative z-10 max-w-[1400px] mx-auto px-5 md:px-8 pb-16 w-full">
+          <p className="text-gold/80 text-[11px] uppercase tracking-[0.35em] font-body mb-4 animate-fade-in">
+            {t("subtitle")}
+          </p>
+          <h1 className="font-heading text-white text-[clamp(2.5rem,6vw,5rem)] leading-[0.95] animate-fade-in delay-100">
+            {t("title")}
+          </h1>
         </div>
       </section>
 
-      <section className="py-12 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <p className="text-gray text-base md:text-lg leading-relaxed">{t("intro")}</p>
+      {/* Intro */}
+      <section className="py-16">
+        <div className="max-w-3xl mx-auto px-5 text-center">
+          <p className="text-gray text-base md:text-lg leading-[1.9]">{t("intro")}</p>
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 bg-gray-light">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Attractions grid */}
+      <section className="pb-20 lg:pb-28">
+        <div className="max-w-[1400px] mx-auto px-5 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {attractions.map(({ key, icon }) => (
+            {attractions.map((key) => (
               <div
                 key={key}
-                className="bg-white p-8 border border-gray-border hover:border-gold hover:shadow-lg transition-all group flex gap-6"
+                className="bg-white p-8 md:p-10 group hover:bg-navy transition-colors duration-500"
               >
-                <span className="text-3xl shrink-0">{icon}</span>
-                <div>
-                  <h3 className="font-heading text-navy text-xl mb-2">{t(key)}</h3>
-                  <p className="text-gray text-sm leading-relaxed mb-3">{t(`${key}Desc`)}</p>
-                  <p className="text-turquoise text-xs uppercase tracking-wider font-body">
+                <div className="flex items-start justify-between gap-6">
+                  <div className="flex-1">
+                    <h3 className="font-heading text-navy text-xl md:text-2xl uppercase tracking-[0.1em] mb-3 group-hover:text-gold transition-colors duration-500">
+                      {t(key)}
+                    </h3>
+                    <p className="text-gray text-sm leading-[1.8] mb-4 group-hover:text-white/60 transition-colors duration-500">
+                      {t(`${key}Desc`)}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="w-4 h-px bg-turquoise" />
+                  <p className="text-turquoise text-[11px] uppercase tracking-[0.2em] font-body group-hover:text-turquoise transition-colors duration-500">
                     {t("fromHotel")}: {t(`${key}Dist`)}
                   </p>
                 </div>

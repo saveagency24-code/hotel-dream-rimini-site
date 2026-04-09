@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
 import { Gilda_Display, Inder } from "next/font/google";
+import type { Metadata } from "next";
+import { SITE_URL } from "@/lib/site";
+import TrackingScripts from "@/components/analytics/TrackingScripts";
 import "./globals.css";
 
 const gildaDisplay = Gilda_Display({
@@ -17,8 +19,10 @@ const inder = Inder({
 });
 
 export const metadata: Metadata = {
-  icons: {
-    icon: "/images/logo.png",
+  metadataBase: new URL(SITE_URL),
+  manifest: "/manifest.webmanifest",
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION || undefined,
   },
 };
 
@@ -28,8 +32,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html suppressHydrationWarning>
+    <html lang="it" suppressHydrationWarning>
       <body className={`${gildaDisplay.variable} ${inder.variable} antialiased`}>
+        <TrackingScripts />
         {children}
       </body>
     </html>

@@ -12,21 +12,10 @@ export const routing = defineRouting({
       en: "/rooms",
       de: "/zimmer",
     },
-    "/colazione": {
-      it: "/colazione",
-      en: "/breakfast",
-      de: "/fruehstueck",
-    },
-    "/bar": "/bar",
     "/servizi": {
       it: "/servizi",
       en: "/services",
       de: "/services",
-    },
-    "/parcheggio": {
-      it: "/parcheggio",
-      en: "/parking",
-      de: "/parkplatz",
     },
     "/offerte": {
       it: "/offerte",
@@ -42,6 +31,23 @@ export const routing = defineRouting({
       it: "/contatti",
       en: "/contacts",
       de: "/kontakt",
+    },
+    "/come-arrivare": {
+      it: "/come-arrivare",
+      en: "/how-to-reach",
+      de: "/anreise",
+    },
+    "/hotel-vicino-rimini-fiera": {
+      it: "/hotel-vicino-rimini-fiera",
+      en: "/hotel-near-rimini-fiera",
+      de: "/hotel-nahe-rimini-fiera",
+    },
+    "/privacy-policy": "/privacy-policy",
+    "/cookie-policy": "/cookie-policy",
+    "/politiche-alberghiere": {
+      it: "/politiche-alberghiere",
+      en: "/hotel-policies",
+      de: "/hotelrichtlinien",
     },
   },
 });

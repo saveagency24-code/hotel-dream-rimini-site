@@ -2,7 +2,7 @@
 
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
-import { routing } from "@/i18n/routing";
+import { routing, type Pathnames } from "@/i18n/routing";
 import { useState, useRef, useEffect } from "react";
 
 const flagMap: Record<string, string> = {
@@ -10,6 +10,31 @@ const flagMap: Record<string, string> = {
   en: "EN",
   de: "DE",
 };
+
+type Locale = (typeof routing.locales)[number];
+
+function toInternalPathname(currentPathname: string): Pathnames {
+  const withoutLocale = currentPathname.replace(/^\/(it|en|de)(?=\/|$)/, "") || "/";
+
+  for (const [internalPath, localizedPath] of Object.entries(routing.pathnames)) {
+    if (typeof localizedPath === "string") {
+      if (withoutLocale === localizedPath || withoutLocale === internalPath) {
+        return internalPath as Pathnames;
+      }
+      continue;
+    }
+
+    if (withoutLocale === internalPath) return internalPath as Pathnames;
+
+    const matchesLocalized = Object.values(localizedPath).some(
+      (candidate) => candidate === withoutLocale
+    );
+
+    if (matchesLocalized) return internalPath as Pathnames;
+  }
+
+  return "/";
+}
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
@@ -29,7 +54,11 @@ export default function LanguageSwitcher() {
   }, []);
 
   function switchLocale(newLocale: string) {
-    router.replace(pathname, { locale: newLocale as "it" | "en" | "de" });
+    const sourcePathname =
+      typeof window !== "undefined" ? window.location.pathname : pathname;
+    const internalPathname = toInternalPathname(sourcePathname);
+
+    router.replace(internalPathname, { locale: newLocale as Locale });
     setOpen(false);
   }
 
@@ -54,7 +83,7 @@ export default function LanguageSwitcher() {
               <button
                 key={l}
                 onClick={() => switchLocale(l)}
-                className="w-full text-left px-4 py-2 text-sm text-navy hover:bg-gold-light transition-colors"
+                className="w-full text-left px-4 py-2 text-sm text-navy border-l-2 border-transparent hover:border-gold hover:bg-white transition-colors"
               >
                 {flagMap[l]}
               </button>
