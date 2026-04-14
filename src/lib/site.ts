@@ -1,7 +1,7 @@
 export const SITE_NAME = "Hotel Dream Rimini";
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/+$/, "") ||
+  process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/+$/, "") ||
   "https://hoteldreamrimini.it";
 
 export const DEFAULT_LOCALE = "it";
