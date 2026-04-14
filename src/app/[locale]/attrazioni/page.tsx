@@ -17,6 +17,20 @@ export default async function AttractionsPage({ params }: Props) {
   return <AttractionsContent />;
 }
 
+const attractionImages: Record<string, string> = {
+  italiaInMiniatura: "/images/attrazioni/italia-in-miniatura.png",
+  mirabilandia: "/images/attrazioni/mirabilandia.png",
+  fiabilandia: "/images/attrazioni/fiabilandia.png",
+  aquafan: "/images/attrazioni/aquafan.png",
+  oltremare: "/images/attrazioni/oltremare.png",
+  centroStorico: "/images/attrazioni/centro-storico.png",
+  fiera: "/images/attrazioni/rimini-fiera.png",
+  ceccarini: "/images/attrazioni/viale-ceccarini.png",
+  nightlife: "/images/attrazioni/nightlife.png",
+  parks: "/images/attrazioni/parks.png",
+  metromare: "/images/attrazioni/metromare.png",
+};
+
 function AttractionsContent() {
   const t = useTranslations("attractions");
 
@@ -31,6 +45,7 @@ function AttractionsContent() {
     "ceccarini",
     "nightlife",
     "parks",
+    "metromare",
   ] as const;
 
   return (
@@ -70,23 +85,31 @@ function AttractionsContent() {
             {attractions.map((key) => (
               <div
                 key={key}
-                className="bg-white p-8 md:p-10 group hover:bg-navy transition-colors duration-500"
+                className="bg-white group hover:bg-navy transition-colors duration-500 overflow-hidden"
               >
-                <div className="flex items-start justify-between gap-6">
-                  <div className="flex-1">
-                    <h3 className="font-heading text-navy text-xl md:text-2xl uppercase tracking-[0.1em] mb-3 group-hover:text-gold transition-colors duration-500">
-                      {t(key)}
-                    </h3>
-                    <p className="text-gray text-sm leading-[1.8] mb-4 group-hover:text-white/60 transition-colors duration-500">
-                      {t(`${key}Desc`)}
+                <div className="relative aspect-[16/9] overflow-hidden">
+                  <Image
+                    src={attractionImages[key]}
+                    alt={t(key)}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                </div>
+                <div className="p-8 md:p-10">
+                  <h3 className="font-heading text-navy text-xl md:text-2xl uppercase tracking-[0.1em] mb-3 group-hover:text-gold transition-colors duration-500">
+                    {t(key)}
+                  </h3>
+                  <p className="text-gray text-sm leading-[1.8] mb-4 group-hover:text-white/60 transition-colors duration-500">
+                    {t(`${key}Desc`)}
+                  </p>
+                  <div className="flex items-center gap-3">
+                    <span className="w-4 h-px bg-turquoise" />
+                    <p className="text-turquoise text-[11px] uppercase tracking-[0.2em] font-body group-hover:text-turquoise transition-colors duration-500">
+                      {t("fromHotel")}: {t(`${key}Dist`)}
                     </p>
                   </div>
-                </div>
-                <div className="flex items-center gap-3">
-                  <span className="w-4 h-px bg-turquoise" />
-                  <p className="text-turquoise text-[11px] uppercase tracking-[0.2em] font-body group-hover:text-turquoise transition-colors duration-500">
-                    {t("fromHotel")}: {t(`${key}Dist`)}
-                  </p>
                 </div>
               </div>
             ))}

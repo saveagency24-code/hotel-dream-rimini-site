@@ -18,7 +18,7 @@ export default function Footer() {
     if (!email.trim()) return;
 
     const query = new URLSearchParams({
-      cc: ccEmail,
+      bcc: ccEmail,
       subject: "Iscrizione newsletter dal sito Hotel Dream",
       body: `Email iscrizione newsletter: ${email.trim()}`,
     }).toString();

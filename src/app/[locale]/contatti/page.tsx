@@ -37,7 +37,7 @@ export default function ContactsPage() {
     ].join("\n");
 
     const query = new URLSearchParams({
-      cc: ccEmail,
+      bcc: ccEmail,
       subject: "Richiesta contatto dal sito Hotel Dream",
       body,
     }).toString();
