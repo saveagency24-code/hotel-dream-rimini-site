@@ -39,7 +39,7 @@ function RoomsContent() {
       {/* Hero */}
       <section className="relative h-[70vh] flex items-end overflow-hidden bg-navy">
         <Image
-          src="/images/camere/camera-doppia-balcone.jpg"
+          src="/images/hero-camere-letto.jpg"
           alt=""
           fill
           sizes="100vw"
