@@ -261,9 +261,9 @@ function HomeContent() {
 
             {/* Package cards */}
             {([
-              { key: "couplesPack" as const, img: "/images/offerta-coppia.jpg" },
-              { key: "familyPack" as const, img: "/images/offerta-famiglia.jpg" },
-              { key: "businessPack" as const, img: "/images/offerta-business.jpg" },
+              { key: "couplesPack" as const, img: "/images/offerta-coppia.png" },
+              { key: "familyPack" as const, img: "/images/offerta-famiglia.png" },
+              { key: "businessPack" as const, img: "/images/offerta-business.png" },
               { key: "weekendSeaPack" as const, img: "/images/offerta-mare.jpg" },
               { key: "eventsPack" as const, img: "/images/offerta-eventi.jpg" },
             ]).map(({ key, img }) => (

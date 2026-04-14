@@ -163,6 +163,19 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Codes */}
+      <div className="border-t border-white/10">
+        <div className="max-w-[1400px] mx-auto px-5 md:px-8 py-4 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
+          <p className="text-white/40 text-[11px] tracking-wider font-body">
+            Codice CIR: <span className="text-white/60">099014-AL-01101</span>
+          </p>
+          <span className="hidden sm:inline text-white/20">|</span>
+          <p className="text-white/40 text-[11px] tracking-wider font-body">
+            Codice CIN: <span className="text-white/60">IT099014A1FA6VZQ3Z</span>
+          </p>
+        </div>
+      </div>
+
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="max-w-[1400px] mx-auto px-5 md:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">

@@ -50,6 +50,21 @@ function PoliciesContent() {
               <p className="text-gray text-[15px] leading-[1.9] whitespace-pre-line">{t(key)}</p>
             </div>
           ))}
+
+          {/* Codici identificativi */}
+          <div className="border-t border-gray/20 pt-10 mt-10">
+            <h2 className="font-heading text-navy text-xl md:text-2xl uppercase tracking-[0.1em] mb-4">
+              Codici Identificativi Struttura
+            </h2>
+            <div className="space-y-2">
+              <p className="text-gray text-[15px] leading-[1.9]">
+                <span className="font-semibold text-navy">Codice CIR:</span>{" "}099014-AL-01101
+              </p>
+              <p className="text-gray text-[15px] leading-[1.9]">
+                <span className="font-semibold text-navy">Codice CIN:</span>{" "}IT099014A1FA6VZQ3Z
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </>

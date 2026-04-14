@@ -96,10 +96,10 @@ function OffersContent() {
 
   const offers = [
     { titleKey: "weekend", descKey: "weekendDesc", includesKey: "weekendIncludes", image: "/images/offerta-weekend.jpg", labelKey: "offerVacanza" },
-    { titleKey: "couplesPack", descKey: "couplesDesc", includesKey: "couplesIncludes", image: "/images/offerta-coppia.jpg", labelKey: "offerRomantica" },
-    { titleKey: "familyPack", descKey: "familyDesc", includesKey: "familyIncludes", image: "/images/offerta-famiglia.jpg", labelKey: "offerFamiglia" },
+    { titleKey: "couplesPack", descKey: "couplesDesc", includesKey: "couplesIncludes", image: "/images/offerta-coppia.png", labelKey: "offerRomantica" },
+    { titleKey: "familyPack", descKey: "familyDesc", includesKey: "familyIncludes", image: "/images/offerta-famiglia.png", labelKey: "offerFamiglia" },
     { titleKey: "weekendSeaPack", descKey: "weekendSeaDesc", includesKey: "weekendSeaIncludes", image: "/images/offerta-mare.jpg", labelKey: "offerMare" },
-    { titleKey: "businessPack", descKey: "businessDesc", includesKey: "businessIncludes", image: "/images/offerta-business.jpg", labelKey: "offerBusiness" },
+    { titleKey: "businessPack", descKey: "businessDesc", includesKey: "businessIncludes", image: "/images/offerta-business.png", labelKey: "offerBusiness" },
     { titleKey: "eventsPack", descKey: "eventsDesc", includesKey: "eventsIncludes", image: "/images/offerta-eventi.jpg", labelKey: "offerEventi" },
   ] as const;
 
