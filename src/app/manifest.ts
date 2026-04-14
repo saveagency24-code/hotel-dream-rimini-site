@@ -16,12 +16,12 @@ export default function manifest(): MetadataRoute.Manifest {
     id: SITE_URL,
     icons: [
       {
-        src: "/images/logo-v3.png",
+        src: "/images/icon-192.png",
         sizes: "192x192",
         type: "image/png",
       },
       {
-        src: "/images/logo-v3.png",
+        src: "/images/icon-512.png",
         sizes: "512x512",
         type: "image/png",
       },
