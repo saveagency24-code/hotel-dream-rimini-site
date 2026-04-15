@@ -26,18 +26,18 @@ function ServicesContent({ locale }: { locale: string }) {
   const bar = useTranslations("bar");
 
   const allServices = [
-    { title: "breakfastTitle" as const, desc: "breakfastDesc" as const },
-    { title: "barTitle" as const, desc: "barDesc" as const },
-    { title: "solariumTitle" as const, desc: "solariumDesc" as const },
-    { title: "parkingTitle" as const, desc: "parkingDesc" as const },
-    { title: "wifiTitle" as const, desc: "wifiDesc" as const },
-    { title: "beachTitle" as const, desc: "beachDesc" as const },
-    { title: "cleaningTitle" as const, desc: "cleaningDesc" as const },
-    { title: "acTitle" as const, desc: "acDesc" as const },
-    { title: "tvTitle" as const, desc: "tvDesc" as const },
-    { title: "bikesTitle" as const, desc: "bikesDesc" as const },
-    { title: "restaurantsTitle" as const, desc: "restaurantsDesc" as const },
-    { title: "receptionTitle" as const, desc: "receptionDesc" as const },
+    { title: "breakfastTitle" as const, desc: "breakfastDesc" as const, icon: "🍳" },
+    { title: "barTitle" as const, desc: "barDesc" as const, icon: "☕" },
+    { title: "solariumTitle" as const, desc: "solariumDesc" as const, icon: "☀️" },
+    { title: "parkingTitle" as const, desc: "parkingDesc" as const, icon: "🅿️" },
+    { title: "wifiTitle" as const, desc: "wifiDesc" as const, icon: "📶" },
+    { title: "beachTitle" as const, desc: "beachDesc" as const, icon: "🏖️" },
+    { title: "cleaningTitle" as const, desc: "cleaningDesc" as const, icon: "✨" },
+    { title: "acTitle" as const, desc: "acDesc" as const, icon: "❄️" },
+    { title: "tvTitle" as const, desc: "tvDesc" as const, icon: "📺" },
+    { title: "bikesTitle" as const, desc: "bikesDesc" as const, icon: "🚲" },
+    { title: "restaurantsTitle" as const, desc: "restaurantsDesc" as const, icon: "🍽️" },
+    { title: "receptionTitle" as const, desc: "receptionDesc" as const, icon: "🛎️" },
   ];
 
   const breakfastCategories = [
@@ -88,14 +88,25 @@ function ServicesContent({ locale }: { locale: string }) {
       <section className="py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-5 md:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {allServices.map(({ title, desc }) => (
-              <div key={title} className="bg-white p-8 md:p-10 group hover:bg-navy transition-colors duration-500">
-                <h3 className="font-heading text-navy text-lg md:text-xl uppercase tracking-[0.15em] mb-4 group-hover:text-gold transition-colors duration-500">
-                  {t(title)}
-                </h3>
-                <p className="text-gray text-sm leading-[1.8] group-hover:text-white/60 transition-colors duration-500">
-                  {t(desc)}
-                </p>
+            {allServices.map(({ title, desc, icon }) => (
+              <div
+                key={title}
+                className="flex gap-4 md:gap-5 rounded-lg border border-navy/10 bg-white p-8 md:p-10 transition-colors duration-500 hover:border-navy/25 group hover:bg-navy"
+              >
+                <span
+                  className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-navy/5 text-2xl transition-all duration-500 group-hover:scale-105 group-hover:bg-gold/15"
+                  aria-hidden
+                >
+                  {icon}
+                </span>
+                <div className="min-w-0">
+                  <h3 className="font-heading text-navy text-lg md:text-xl uppercase tracking-[0.15em] mb-3 group-hover:text-gold transition-colors duration-500">
+                    {t(title)}
+                  </h3>
+                  <p className="text-gray text-sm leading-[1.8] group-hover:text-white/60 transition-colors duration-500">
+                    {t(desc)}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -187,32 +198,62 @@ function ServicesContent({ locale }: { locale: string }) {
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* FAQ (accordion nativo: cliccabile, accessibile, senza JS) */}
       <section className="py-20 lg:py-24 bg-white">
         <div className="max-w-4xl mx-auto px-5 md:px-8">
           <h2 className="font-heading text-navy text-2xl md:text-3xl uppercase tracking-[0.1em] mb-8">
             FAQ Servizi
           </h2>
-          <div className="space-y-6">
-            <div className="border-l-2 border-gold pl-5">
-              <h3 className="font-heading text-navy text-lg mb-2">A che ora viene servita la colazione?</h3>
-              <p className="text-gray text-[15px] leading-[1.8]">
-                La colazione viene servita ogni giorno dalle 7.00 alle 11.00.
-              </p>
-            </div>
-            <div className="border-l-2 border-gold pl-5">
-              <h3 className="font-heading text-navy text-lg mb-2">Avete convenzioni con ristoranti?</h3>
-              <p className="text-gray text-[15px] leading-[1.8]">
-                Sì, abbiamo convenzioni attive con ristoranti partner a Rimini e Miramare.
-              </p>
-            </div>
-            <div className="border-l-2 border-gold pl-5">
-              <h3 className="font-heading text-navy text-lg mb-2">Come raggiungo l'hotel con i mezzi?</h3>
-              <p className="text-gray text-[15px] leading-[1.8]">
-                La stazione di Miramare e la fermata Metro Mare sono vicine all'hotel e permettono
-                collegamenti rapidi con Rimini e Riccione.
-              </p>
-            </div>
+          <div className="divide-y divide-navy/10 border-y border-navy/10">
+            <details className="group faq-details">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-heading text-navy text-lg outline-none transition-colors hover:text-navy/80 focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 rounded-md [&::-webkit-details-marker]:hidden">
+                <span>Qual è l&apos;orario della colazione?</span>
+                <span
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-navy/15 text-gold transition-transform duration-300 group-open:rotate-180"
+                  aria-hidden
+                >
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="border-l-2 border-gold/80 pl-5 pb-5 text-gray text-[15px] leading-[1.8]">
+                La colazione è servita ogni giorno dalle 7:00 alle 11:00.
+              </div>
+            </details>
+            <details className="group faq-details">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-heading text-navy text-lg outline-none transition-colors hover:text-navy/80 focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 rounded-md [&::-webkit-details-marker]:hidden">
+                <span>L&apos;hotel ha convenzioni con ristoranti?</span>
+                <span
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-navy/15 text-gold transition-transform duration-300 group-open:rotate-180"
+                  aria-hidden
+                >
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="border-l-2 border-gold/80 pl-5 pb-5 text-gray text-[15px] leading-[1.8]">
+                Sì, Hotel Dream ha convenzioni con ristoranti partner a Rimini e Miramare.
+              </div>
+            </details>
+            <details className="group faq-details">
+              <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-heading text-navy text-lg outline-none transition-colors hover:text-navy/80 focus-visible:ring-2 focus-visible:ring-gold/60 focus-visible:ring-offset-2 rounded-md [&::-webkit-details-marker]:hidden">
+                <span>Come raggiungo l&apos;hotel senza auto?</span>
+                <span
+                  className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-navy/15 text-gold transition-transform duration-300 group-open:rotate-180"
+                  aria-hidden
+                >
+                  <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </span>
+              </summary>
+              <div className="border-l-2 border-gold/80 pl-5 pb-5 text-gray text-[15px] leading-[1.8]">
+                L&apos;hotel è vicino alla stazione di Miramare e alla fermata Metro Mare, con collegamenti rapidi tra
+                Rimini e Riccione.
+              </div>
+            </details>
           </div>
         </div>
       </section>

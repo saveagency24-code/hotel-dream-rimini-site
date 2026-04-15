@@ -46,8 +46,8 @@ function HomeContent() {
       {/* ───── HERO ───── */}
       <section className="relative h-screen flex flex-col justify-center overflow-hidden bg-navy">
         {/* Background */}
-        <div className="absolute inset-0 bg-[url('/images/hotel-esterno-notte.png')] bg-cover bg-center opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/50 via-navy/30 to-navy/70" />
+        <div className="absolute inset-0 rounded-lg bg-[url('/images/hotel-esterno-notte.png')] bg-cover bg-center opacity-30" />
+        <div className="absolute inset-0 rounded-lg bg-gradient-to-b from-navy/50 via-navy/30 to-navy/70" />
 
         {/* Marquee */}
         <div className="absolute top-[38%] md:top-[35%] left-0 right-0 overflow-hidden pointer-events-none z-10 -translate-y-1/2">

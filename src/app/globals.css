@@ -96,3 +96,14 @@ h1, h2, h3, h4, h5, h6 {
 .img-zoom:hover .img-placeholder {
   transform: scale(1.05);
 }
+
+/* Foto contenuti: bordo leggermente arrotondato (Header/Footer fuori da main) */
+main img.object-cover {
+  border-radius: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  main img.object-cover {
+    border-radius: 0.625rem;
+  }
+}
