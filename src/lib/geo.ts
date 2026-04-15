@@ -23,11 +23,7 @@ export function getHotelSchema(locale: Locale) {
     "@id": `${SITE_URL}/#hotel`,
     name: SITE_NAME,
     url: localePath,
-    image: [
-      `${SITE_URL}/images/hotel-esterno-notte.png`,
-      `${SITE_URL}/images/sala-colazione.jpg`,
-      `${SITE_URL}/images/bar-interno.jpg`,
-    ],
+    image: [`${SITE_URL}/images/hotel-esterno-notte.png`],
     description:
       "Hotel Dream a Miramare di Rimini, a 150 metri dal mare, con colazione 7:00-11:00, parcheggio privato, convenzioni ristoranti e collegamenti Metro Mare.",
     starRating: {

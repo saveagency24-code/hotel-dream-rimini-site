@@ -105,16 +105,7 @@ function ServicesContent({ locale }: { locale: string }) {
       {/* Breakfast section */}
       <section id="colazione" className="scroll-mt-32 py-20 lg:py-28 bg-white">
         <div className="max-w-[1400px] mx-auto px-5 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            <div className="relative aspect-[4/5] bg-white overflow-hidden">
-              <Image
-                src="/images/sala-colazione.jpg"
-                alt="Sala colazione"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
+          <div className="max-w-3xl">
             <div className="lg:pt-6">
               <p className="text-gold/80 text-[11px] uppercase tracking-[0.35em] font-body mb-4">
                 {breakfast("subtitle")}
@@ -143,26 +134,15 @@ function ServicesContent({ locale }: { locale: string }) {
       {/* Bar section */}
       <section id="bar" className="scroll-mt-32 py-20 lg:py-28">
         <div className="max-w-[1400px] mx-auto px-5 md:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center mb-16">
-            <div>
-              <p className="text-gold/80 text-[11px] uppercase tracking-[0.35em] font-body mb-4">
-                {bar("subtitle")}
-              </p>
-              <h2 className="font-heading text-navy text-3xl md:text-[2.75rem] uppercase tracking-[0.1em] mb-8 leading-tight">
-                {bar("title")}
-              </h2>
-              <p className="text-gray text-base md:text-[17px] leading-[1.9] mb-6">{bar("description")}</p>
-              <p className="text-gray text-base md:text-[17px] leading-[1.9]">{bar("description2")}</p>
-            </div>
-            <div className="relative aspect-[4/3] bg-white overflow-hidden">
-              <Image
-                src="/images/bar-interno.jpg"
-                alt="Bar Hotel Dream"
-                fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
+          <div className="max-w-3xl mb-16">
+            <p className="text-gold/80 text-[11px] uppercase tracking-[0.35em] font-body mb-4">
+              {bar("subtitle")}
+            </p>
+            <h2 className="font-heading text-navy text-3xl md:text-[2.75rem] uppercase tracking-[0.1em] mb-8 leading-tight">
+              {bar("title")}
+            </h2>
+            <p className="text-gray text-base md:text-[17px] leading-[1.9] mb-6">{bar("description")}</p>
+            <p className="text-gray text-base md:text-[17px] leading-[1.9]">{bar("description2")}</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
