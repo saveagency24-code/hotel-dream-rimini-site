@@ -23,13 +23,13 @@ function RoomsContent() {
   const common = useTranslations("common");
 
   const roomTypes = [
-    { key: "single" as const, count: "4", img: "/images/camere/camera-singola.jpg" },
-    { key: "double" as const, count: "14", img: "/images/camere/camera-doppia.jpg" },
-    { key: "suite" as const, count: "2", img: "/images/camere/camera-suite.jpg" },
-    { key: "triple" as const, count: "5", img: "/images/camere/camera-tripla.jpg" },
-    { key: "quadruple" as const, count: "6", img: "/images/camere/camera-quadrupla.jpg" },
-    { key: "group" as const, count: "2", img: "/images/camere/camera-gruppo.jpg" },
-    { key: "family" as const, count: "2", img: "/images/camere/camera-familiare.jpg" },
+    { key: "single" as const, count: "4", img: "/images/camere/camera-singola.png" },
+    { key: "double" as const, count: "14", img: "/images/camere/camera-doppia.png" },
+    { key: "suite" as const, count: "2", img: "/images/camere/camera-suite.png" },
+    { key: "triple" as const, count: "5", img: "/images/camere/camera-tripla.png" },
+    { key: "quadruple" as const, count: "6", img: "/images/camere/camera-quadrupla.png" },
+    { key: "group" as const, count: "2", img: "/images/camere/camera-gruppo.png" },
+    { key: "family" as const, count: "2", img: "/images/camere/camera-familiare.png" },
   ];
 
   const amenities = ["amenityAC", "amenityTV", "amenityWifi", "amenityCleaning"] as const;
@@ -39,7 +39,7 @@ function RoomsContent() {
       {/* Hero */}
       <section className="relative h-[70vh] flex items-end overflow-hidden bg-navy">
         <Image
-          src="/images/hero-camere-letto.jpg"
+          src="/images/hero-camere-letto.png"
           alt=""
           fill
           sizes="100vw"

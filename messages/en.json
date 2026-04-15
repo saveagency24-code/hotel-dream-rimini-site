@@ -98,7 +98,9 @@
     "totalRooms": "35 rooms",
     "metersFromSea": "150m from the sea",
     "newManagement": "New Management",
-    "breakfastIncluded": "Breakfast Included"
+    "breakfastIncluded": "Breakfast Included",
+    "commonAreasTitle": "Lobby & common areas",
+    "commonAreasSubtitle": "Modern spaces to relax during your stay"
   },
   "rooms": {
     "title": "Rooms",

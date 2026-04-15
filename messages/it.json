@@ -98,7 +98,9 @@
     "totalRooms": "35 camere",
     "metersFromSea": "150m dal mare",
     "newManagement": "Nuova Gestione",
-    "breakfastIncluded": "Colazione Inclusa"
+    "breakfastIncluded": "Colazione Inclusa",
+    "commonAreasTitle": "Hall e ambienti comuni",
+    "commonAreasSubtitle": "Spazi moderni dove rilassarti durante il soggiorno"
   },
   "rooms": {
     "title": "Le Camere",

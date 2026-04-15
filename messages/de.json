@@ -98,7 +98,9 @@
     "totalRooms": "35 Zimmer",
     "metersFromSea": "150m vom Meer",
     "newManagement": "Neue Leitung",
-    "breakfastIncluded": "Frühstück Inklusive"
+    "breakfastIncluded": "Frühstück Inklusive",
+    "commonAreasTitle": "Lobby & Gemeinschaftsbereiche",
+    "commonAreasSubtitle": "Moderne Räume zum Entspannen während Ihres Aufenthalts"
   },
   "rooms": {
     "title": "Zimmer",

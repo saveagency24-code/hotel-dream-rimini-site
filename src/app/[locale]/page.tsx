@@ -34,11 +34,11 @@ function HomeContent() {
   ] as const;
 
   const roomTypes = [
-    { key: "single" as const, label: "1 ospite", img: "/images/camere/camera-singola.jpg" },
-    { key: "double" as const, label: "2 ospiti", img: "/images/camere/camera-doppia.jpg" },
-    { key: "suite" as const, label: "2 ospiti", img: "/images/camere/camera-suite.jpg" },
-    { key: "triple" as const, label: "3 ospiti", img: "/images/camere/camera-tripla.jpg" },
-    { key: "family" as const, label: "5-6 ospiti", img: "/images/camere/camera-familiare.jpg" },
+    { key: "single" as const, label: "1 ospite", img: "/images/camere/camera-singola.png" },
+    { key: "double" as const, label: "2 ospiti", img: "/images/camere/camera-doppia.png" },
+    { key: "suite" as const, label: "2 ospiti", img: "/images/camere/camera-suite.png" },
+    { key: "triple" as const, label: "3 ospiti", img: "/images/camere/camera-tripla.png" },
+    { key: "family" as const, label: "5-6 ospiti", img: "/images/camere/camera-familiare.png" },
   ];
 
   return (

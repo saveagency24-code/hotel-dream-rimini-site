@@ -17,3 +17,19 @@
 
 - `npm run build`
 - Controllare pagina `/it/servizi` — sezione FAQ, griglia 12 servizi, hero immagine arrotondata.
+
+## Mapping foto camere (PNG, `public/images/camere/`)
+
+| File sito | Contenuto |
+|-----------|-----------|
+| `camera-singola.png` | Camera singola |
+| `camera-doppia.png` | Doppia (file `camera_doppia_`) |
+| `camera-suite.png` | Suite / doppia standard (`doppia_standard`) |
+| `camera-tripla.png` | Tripla principale (`camera_tripla-52c0…`) |
+| `camera-quadrupla.png` | Quadrupla (`camera_quadrupla_-9053…`) |
+| `camera-gruppo.png` | Gruppo — variante tripla ampia (`camera_tripla__2_`) |
+| `camera-familiare.png` | Familiare — letto + castello (`camera_quadrupla-16715…`) |
+| `../hero-camere-letto.png` | Hero pagina Camere — dettaglio letto (`dettaglio_camera_doppia`) |
+| `../hotel-lobby-1/2.png` | Hall (pagina Hotel) |
+
+Asset non usati in repo (sostituibili a mano se serve): `camera_tripla_-b0b6655e`, `camera_tripla__1_`.

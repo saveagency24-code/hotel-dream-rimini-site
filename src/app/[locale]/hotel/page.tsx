@@ -111,6 +111,36 @@ function HotelContent() {
         </div>
       </section>
 
+      {/* Hall & ambienti comuni */}
+      <section className="py-16 lg:py-24 bg-white border-t border-gray-border">
+        <div className="max-w-[1400px] mx-auto px-5 md:px-8">
+          <h2 className="font-heading text-navy text-2xl md:text-4xl uppercase tracking-[0.1em] mb-4">
+            {t("commonAreasTitle")}
+          </h2>
+          <p className="text-gray text-base md:text-[17px] leading-[1.9] mb-10 max-w-2xl">{t("commonAreasSubtitle")}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative aspect-[4/3] overflow-hidden img-zoom">
+              <Image
+                src="/images/hotel-lobby-1.png"
+                alt=""
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden img-zoom">
+              <Image
+                src="/images/hotel-lobby-2.png"
+                alt=""
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Three columns con icone */}
       <section className="py-20 lg:py-28 bg-navy">
         <div className="max-w-[1400px] mx-auto px-5 md:px-8 grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8">
