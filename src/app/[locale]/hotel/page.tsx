@@ -125,7 +125,7 @@ function HotelContent() {
                 alt=""
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover origin-center scale-[1.2]"
+                className="object-cover origin-center scale-[1.68]"
               />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden img-zoom">
