@@ -119,13 +119,13 @@ function HotelContent() {
           </h2>
           <p className="text-gray text-base md:text-[17px] leading-[1.9] mb-10 max-w-2xl">{t("commonAreasSubtitle")}</p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="relative aspect-[4/3] overflow-hidden img-zoom">
+            <div className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src="/images/hotel-lobby-1.png"
                 alt=""
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
+                className="object-cover origin-center scale-[1.2]"
               />
             </div>
             <div className="relative aspect-[4/3] overflow-hidden img-zoom">
