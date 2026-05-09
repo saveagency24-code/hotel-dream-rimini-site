@@ -25,6 +25,28 @@ export default function ServicePhotoCarousel({ images, prevLabel, nextLabel }: P
 
   if (images.length === 0) return null;
 
+  if (images.length === 2) {
+    return (
+      <div className="relative w-full max-w-[1400px]">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6">
+          {images.map((img) => (
+            <div key={img.src} className="min-w-0">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-navy/10 bg-navy img-zoom">
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="relative w-full max-w-[1400px]">
       <div
@@ -34,7 +56,7 @@ export default function ServicePhotoCarousel({ images, prevLabel, nextLabel }: P
       >
         {images.map((img) => (
           <div key={img.src} data-carousel-slide className="shrink-0 w-[min(88vw,440px)]">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-navy/10 bg-navy/5 img-zoom">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-sm border border-navy/10 bg-navy img-zoom">
               <Image
                 src={img.src}
                 alt={img.alt}
