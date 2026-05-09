@@ -44,10 +44,10 @@ export default function Header() {
       >
         <div className="max-w-[1400px] mx-auto px-5 md:px-8 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="shrink-0 relative z-10">
+          <Link href="/" className="shrink-0 relative z-10 inline-block" aria-label={t("home")}>
             <Image
               src="/images/logo-v3.png"
-              alt="Hotel Dream Rimini"
+              alt=""
               width={160}
               height={64}
               className="h-12 md:h-14 w-auto object-contain"
@@ -87,7 +87,9 @@ export default function Header() {
       {/* Full-screen Menu Overlay (Aria-style layout) */}
       <div
         className={`fixed inset-0 z-[100] transition-all duration-500 ${
-          menuOpen ? "visible opacity-100" : "invisible opacity-0"
+          menuOpen
+            ? "visible opacity-100 pointer-events-auto"
+            : "invisible opacity-0 pointer-events-none"
         }`}
       >
         <div className="absolute inset-0 bg-black/45" />
@@ -102,10 +104,10 @@ export default function Header() {
           {/* Right menu pane */}
           <div className="relative bg-navy text-white flex flex-col">
             <div className="px-5 md:px-8 pt-5 pb-3 flex items-start justify-between">
-              <Link href="/" onClick={() => setMenuOpen(false)}>
+              <Link href="/" onClick={() => setMenuOpen(false)} aria-label={t("home")}>
                 <Image
                   src="/images/logo-v3.png"
-                  alt="Hotel Dream"
+                  alt=""
                   width={130}
                   height={52}
                   className="h-10 w-auto object-contain"

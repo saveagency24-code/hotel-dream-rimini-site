@@ -34,10 +34,10 @@ export default function Footer() {
 
           {/* Column 1: Logo + Nav links */}
           <div>
-            <Link href="/" className="inline-block mb-8">
+            <Link href="/" className="inline-block mb-8" aria-label={nav("home")}>
               <Image
                 src="/images/logo-v3.png"
-                alt="Hotel Dream Rimini"
+                alt=""
                 width={160}
                 height={64}
                 className="h-14 w-auto object-contain"
