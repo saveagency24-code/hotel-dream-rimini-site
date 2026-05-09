@@ -3,6 +3,7 @@ import { setRequestLocale } from "next-intl/server";
 import StructuredData from "@/components/seo/StructuredData";
 import { getBreadcrumbSchema } from "@/lib/geo";
 import { SITE_URL } from "@/lib/site";
+import { seoForPath } from "@/lib/seo-metadata";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -51,6 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: data.title,
     description: data.intro,
+    ...seoForPath("/come-arrivare", locale),
   };
 }
 

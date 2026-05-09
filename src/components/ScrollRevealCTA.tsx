@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState, useCallback } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import BookingPortalLink from "./BookingPortalLink";
 
 export default function ScrollRevealCTA() {
   const t = useTranslations("hero");
@@ -86,12 +86,12 @@ export default function ScrollRevealCTA() {
               {t("hotelName")}
             </h3>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link
-                href="/contatti"
+              <BookingPortalLink
+                source="scroll_reveal_cta"
                 className="border border-gold text-gold text-[11px] uppercase tracking-[0.2em] font-body px-8 py-3.5 hover:bg-gold hover:text-navy transition-all duration-300"
               >
                 {common("bookNow")}
-              </Link>
+              </BookingPortalLink>
               <a
                 href="https://wa.me/393339299408"
                 target="_blank"

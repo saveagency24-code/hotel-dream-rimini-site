@@ -4,6 +4,44 @@ import { NextRequest, NextResponse } from "next/server";
 
 const handleI18nRouting = createMiddleware(routing);
 
+/** Host canonico da NEXT_PUBLIC_SITE_URL (es. hoteldreamrimini.com o www...). Evita duplicati SEO tra www e apex. */
+function getPreferredHostname(): string {
+  const raw = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  if (raw) {
+    try {
+      return new URL(raw).hostname;
+    } catch {
+      /* ignore */
+    }
+  }
+  return "hoteldreamrimini.com";
+}
+
+function shouldSkipHostRedirect(host: string): boolean {
+  if (!host) return true;
+  if (host === "localhost" || host.startsWith("127.0.0.1")) return true;
+  if (host.endsWith(".vercel.app")) return true;
+  return false;
+}
+
+/** Redirect 301 verso l’unico host canonico se l’utente è su www o apex alternativo. */
+function redirectToCanonicalHost(request: NextRequest): NextResponse | null {
+  const host = request.headers.get("host")?.split(":")[0] ?? "";
+  if (shouldSkipHostRedirect(host)) return null;
+
+  const preferred = getPreferredHostname();
+  if (host === preferred) return null;
+
+  const stripWww = (h: string) => h.replace(/^www\./, "");
+  if (stripWww(host) !== stripWww(preferred)) return null;
+
+  const url = request.nextUrl.clone();
+  url.hostname = preferred;
+  url.protocol = "https:";
+  return NextResponse.redirect(url, 301);
+}
+
+
 function getInternalPathname(pathnameWithoutLocale: string): string | null {
   const normalized = pathnameWithoutLocale || "/";
 
@@ -37,6 +75,9 @@ function getCanonicalPathnameForLocale(internalPath: string, locale: "it" | "en"
 }
 
 export default function middleware(request: NextRequest) {
+  const hostRedirect = redirectToCanonicalHost(request);
+  if (hostRedirect) return hostRedirect;
+
   const { pathname, search } = request.nextUrl;
   const match = pathname.match(/^\/(it|en|de)(\/.*)?$/);
 

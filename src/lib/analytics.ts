@@ -3,7 +3,8 @@ export type ConversionEventName =
   | "newsletter_submit"
   | "click_phone"
   | "click_whatsapp"
-  | "click_email";
+  | "click_email"
+  | "booking_portal_click";
 
 declare global {
   interface Window {

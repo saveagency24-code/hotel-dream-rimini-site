@@ -19,7 +19,7 @@
     "attractionsTitle": "Attractions | Hotel Dream Rimini",
     "attractionsDesc": "Discover what to visit near Hotel Dream: amusement parks, Rimini old town, Rimini Fiera, beaches and nightlife.",
     "contactsTitle": "Contacts | Hotel Dream Rimini",
-    "contactsDesc": "Contact Hotel Dream Rimini: phone, email, request form. We are in Miramare, 150m from the sea."
+    "contactsDesc": "Hotel Dream Rimini: book online, phone, WhatsApp and map. Miramare, 150m from the beach — new management 2026."
   },
   "nav": {
     "home": "Home",
@@ -131,7 +131,7 @@
     "amenityTV": "TV in room",
     "amenityWifi": "Free Wi-Fi",
     "amenityCleaning": "Daily cleaning",
-    "requestInfo": "Request Information"
+    "requestInfo": "Book online"
   },
   "breakfast": {
     "title": "Breakfast",
@@ -156,6 +156,18 @@
     "drinks": "Cocktails & Drinks",
     "coffee": "Coffee Bar",
     "snacks": "Snacks & Bites"
+  },
+  "solarium": {
+    "title": "Solarium",
+    "subtitle": "Soak up the sun at your own pace",
+    "description": "Our solarium area is designed for guests who want a break from the beach without giving up the sunshine. Deckchairs, sun umbrellas and a peaceful setting invite you to unwind between a swim, a stroll and an aperitif at the bar.",
+    "description2": "Reserved for hotel guests, it is a quiet, convenient outdoor corner when you prefer to stay on property while still enjoying the open air."
+  },
+  "kidsRoom": {
+    "title": "Kids' playroom",
+    "subtitle": "A fun corner for families",
+    "description": "The kids' room is a welcoming, safe space where children can play, read and meet other young guests, always with parents nearby. Ideal for families holidaying in Miramare, it makes everyone’s stay more relaxed.",
+    "description2": "You will find games suited to different ages and areas that spark imagination and sociability — perfect for a break after a day at the beach or a theme park."
   },
   "services": {
     "title": "Services",
@@ -182,6 +194,8 @@
     "bikesDesc": "Classic bicycles and e-bikes for hire to explore Rimini, the cycle path and the surroundings in total freedom.",
     "restaurantsTitle": "Restaurant Agreements",
     "restaurantsDesc": "Partnership with the best restaurants in the area to enjoy Romagna and Mediterranean cuisine at special prices.",
+    "kidsAreaTitle": "Kids' Area",
+    "kidsAreaDesc": "A dedicated space for children to play in safety, designed for families on holiday.",
     "receptionTitle": "Multilingual Reception",
     "receptionDesc": "We welcome you in Italian, English and German to assist you throughout your entire stay with tips, bookings and information.",
     "partners": "Our Partners",
@@ -189,7 +203,32 @@
     "rossopomodoro": "Rossopomodoro Rimini",
     "purograno": "La Cucina di Purograno",
     "dallaLella": "Dalla Lella Rimini",
-    "amor": "Amor Rimini"
+    "amor": "Amor Rimini",
+    "faqSectionTitle": "FAQ — Hotel in Rimini and Miramare",
+    "faq1Question": "Where is Hotel Dream and how far is it from the beach?",
+    "faq1Answer": "Hotel Dream is at Viale Tirrenia 10 in Miramare di Rimini, about 150 metres from the beach. From here you can easily reach the seafront, Miramare station and the Metro Mare stop.",
+    "faq2Question": "How do I book a room?",
+    "faq2Answer": "Book through the official TeamSystem Hospitality booking engine linked on our website: check real-time availability, rates and confirm your stay securely. For special requests you can also message us on WhatsApp.",
+    "faq3Question": "Is breakfast included and what are the hours?",
+    "faq3Answer": "Yes. Breakfast is included and served in the breakfast room from 7:00 to 11:00 with a sweet and savoury buffet, hot and cold drinks and fresh products.",
+    "faq4Question": "Is parking available and how much does it cost?",
+    "faq4Answer": "We have private indoor parking subject to availability, at about €10 per day. We recommend reserving a space, especially in high season.",
+    "faq5Question": "Is Hotel Dream a good choice for Rimini trade fairs?",
+    "faq5Answer": "Yes. From Miramare, Rimini Fiera is about 20 minutes by car; you can also use the train from Miramare station. Wi-Fi, breakfast and parking suit business travellers.",
+    "faq6Question": "What are check-in and check-out times?",
+    "faq6Answer": "Check-in from 2:00 PM to 10:00 PM; check-out by 10:00 AM. Please inform us in advance for arrivals after 10:00 PM. A valid ID is required for all guests at check-in.",
+    "faq7Question": "Is Wi-Fi free?",
+    "faq7Answer": "Yes, Wi-Fi is free throughout the hotel: rooms, common areas, bar and outdoor spaces where available.",
+    "faq8Question": "How do I get there by train or from Federico Fellini Airport?",
+    "faq8Answer": "The hotel is close to Miramare station and the Metro Mare stop. From the A14 motorway use exit Rimini Sud; the airport is about 10 km by car or taxi.",
+    "faq9Question": "What is the cancellation policy?",
+    "faq9Answer": "In general: free cancellation up to 7 days before arrival; between 7 and 3 days before, the first night may be charged; within 48 hours or no-show, the full stay may be charged. Conditions may vary in high season or during fairs — check when booking.",
+    "faq10Question": "Is the hotel family-friendly in Rimini?",
+    "faq10Answer": "Yes. We offer family and triple rooms, a kids’ area and services tailored for families on the Romagna Riviera.",
+    "faq11Question": "Do you have agreements with restaurants and beach clubs?",
+    "faq11Answer": "Yes, we have agreements with partner restaurants in Rimini and Miramare and with nearby beach establishments, with preferential rates for guests.",
+    "faq12Question": "How far are Rimini centre, the fair and Riccione?",
+    "faq12Answer": "From Miramare you can reach Rimini old town, the fair area and Viale Ceccarini in Riccione in a few minutes by car. Metro Mare connects the coast quickly between Rimini and Riccione."
   },
   "parking": {
     "title": "Parking",
@@ -288,17 +327,17 @@
     "city": "47924 Miramare (RN), Italy",
     "phone": "333 9299408",
     "email": "onlyyoumisahotel@gmail.com",
-    "formTitle": "Request Information",
-    "name": "Full Name",
-    "emailField": "Your Email",
-    "phoneField": "Phone",
-    "message": "Message",
-    "checkin": "Check-in",
-    "checkout": "Check-out",
-    "guests": "Guests",
-    "send": "Send Request",
+    "labelAddress": "Address",
+    "labelPhone": "Phone",
+    "labelEmail": "Email",
+    "labelWhatsapp": "WhatsApp",
+    "whatsappHint": "For special requests, last-minute needs or questions before booking, message us on WhatsApp — we reply as soon as we can.",
     "findUs": "Find Us",
-    "findUsText": "We are in Miramare di Rimini, just 150 meters from the sea. Easily reachable from the A14 highway, Rimini train station and Miramare station (Miramare stop of the train and Metro Mare)."
+    "findUsText": "We are in Miramare di Rimini, just 150 meters from the sea. Easily reachable from the A14 highway, Rimini train station and Miramare station (Miramare stop of the train and Metro Mare).",
+    "bookingKicker": "Bookings",
+    "bookingTitle": "Book your room online",
+    "bookingBody": "Book directly on the official TeamSystem Hospitality engine: real-time availability, clear rates and secure confirmation. For special requests, contact us on WhatsApp.",
+    "bookingCta": "Go to booking engine"
   },
   "footer": {
     "hotelName": "Hotel Dream",
@@ -355,6 +394,8 @@
     "back": "Back",
     "close": "Close",
     "menu": "Menu",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "carouselPrev": "Previous photo",
+    "carouselNext": "Next photo"
   }
 }

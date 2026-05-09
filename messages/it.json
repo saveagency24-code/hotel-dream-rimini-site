@@ -19,7 +19,7 @@
     "attractionsTitle": "Attrazioni | Hotel Dream Rimini",
     "attractionsDesc": "Scopri cosa visitare vicino a Hotel Dream: parchi divertimento, centro storico di Rimini, Rimini Fiera, spiagge e vita notturna.",
     "contactsTitle": "Contatti | Hotel Dream Rimini",
-    "contactsDesc": "Contatta Hotel Dream Rimini: telefono, email, modulo di richiesta. Siamo a Miramare, 150m dal mare."
+    "contactsDesc": "Hotel Dream Rimini: prenotazione online, telefono, WhatsApp e mappa. Miramare, a 150 m dal mare — nuova gestione 2026."
   },
   "nav": {
     "home": "Home",
@@ -131,7 +131,7 @@
     "amenityTV": "TV in camera",
     "amenityWifi": "Wi-Fi gratuito",
     "amenityCleaning": "Pulizia giornaliera",
-    "requestInfo": "Richiedi Informazioni"
+    "requestInfo": "Prenota online"
   },
   "breakfast": {
     "title": "Colazione",
@@ -156,6 +156,18 @@
     "drinks": "Cocktail e Drink",
     "coffee": "Caffetteria",
     "snacks": "Snack e Stuzzichini"
+  },
+  "solarium": {
+    "title": "Solarium",
+    "subtitle": "Prendere il sole in piena tranquillità",
+    "description": "La nostra area solarium è pensata per chi vuole una pausa dalla spiaggia senza rinunciare al sole. Lettini, ombrelloni e un ambiente riservato ti invitano a rilassarti tra un bagno in mare, una passeggiata e un aperitivo al bar.",
+    "description2": "L'area è riservata agli ospiti dell'hotel: comoda, silenziosa e perfetta quando desideri restare in struttura godendo di un po' di relax all'aperto."
+  },
+  "kidsRoom": {
+    "title": "Sala bimbi",
+    "subtitle": "Spazio gioco per tutta la famiglia",
+    "description": "La sala bimbi è un ambiente accogliente e sicuro dove i più piccoli possono giocare, leggere e incontrarsi, sempre sotto la supervisione dei genitori. Pensata per le famiglie in vacanza a Miramare, rende il soggiorno più sereno per grandi e piccini.",
+    "description2": "Troverai giochi adatti a diverse età e angoli pensati per stimolare fantasia e socialità: il posto giusto per una pausa dopo una giornata al mare o al parco."
   },
   "services": {
     "title": "Servizi",
@@ -191,7 +203,32 @@
     "rossopomodoro": "Rossopomodoro Rimini",
     "purograno": "La Cucina di Purograno",
     "dallaLella": "Dalla Lella Rimini",
-    "amor": "Amor Rimini"
+    "amor": "Amor Rimini",
+    "faqSectionTitle": "Domande frequenti — Hotel a Rimini e Miramare",
+    "faq1Question": "Dove si trova Hotel Dream e quanto dista dal mare?",
+    "faq1Answer": "Hotel Dream è in Viale Tirrenia 10 a Miramare di Rimini, a circa 150 metri dalla spiaggia. Da qui raggiungi comodamente il lungomare, la Metro Mare e la stazione di Miramare.",
+    "faq2Question": "Come posso prenotare una camera?",
+    "faq2Answer": "Le prenotazioni si effettuano dal motore di prenotazione online TeamSystem Hospitality collegato al sito ufficiale: controlli disponibilità, tariffe e confermi il soggiorno in modo sicuro. È il canale principale per prenotare.",
+    "faq3Question": "La colazione è inclusa nel prezzo della camera?",
+    "faq3Answer": "Sì. La colazione è inclusa ed è servita in sala colazione dalle 7:00 alle 11:00, con buffet dolce e salato, bevande calde e fredde e prodotti freschi.",
+    "faq4Question": "Il parcheggio è disponibile e quanto costa?",
+    "faq4Answer": "È disponibile un parcheggio privato interno, soggetto a disponibilità, a circa 10 euro al giorno. Si consiglia di prenotare il posto, soprattutto in alta stagione.",
+    "faq5Question": "Hotel Dream è adatto per chi partecipa a fiere a Rimini?",
+    "faq5Answer": "Sì. Da Miramare Rimini Fiera è raggiungibile in circa 20 minuti in auto; sono possibili anche collegamenti in treno dalla stazione di Miramare. Wi-Fi, colazione e parcheggio supportano chi viaggia per lavoro.",
+    "faq6Question": "Quali sono gli orari di check-in e check-out?",
+    "faq6Answer": "Check-in dalle 14:00 alle 22:00; check-out entro le 10:00. Per arrivi dopo le 22:00 è necessario avvisare la struttura. Al check-in serve un documento d'identità valido per tutti gli ospiti (obbligo di legge).",
+    "faq7Question": "Il Wi-Fi è gratuito in hotel?",
+    "faq7Answer": "Sì, la connessione Wi-Fi è gratuita in tutta la struttura: camere, aree comuni, bar e spazi esterni ove disponibile.",
+    "faq8Question": "Come arrivo in treno o dall'aeroporto Federico Fellini?",
+    "faq8Answer": "L'hotel è vicino alla stazione di Miramare e alla fermata Metro Mare. Dall'autostrada A14 si esce a Rimini Sud; dall'aeroporto sono circa 10 km in auto o taxi.",
+    "faq9Question": "Quali sono le condizioni di cancellazione della prenotazione?",
+    "faq9Answer": "In linea generale: cancellazione gratuita fino a 7 giorni prima dell'arrivo; tra 7 e 3 giorni prima può essere addebitata la prima notte; entro 48 ore o in caso di no-show può essere addebitato l'intero soggiorno. Le condizioni possono variare in alta stagione o durante fiere: verificare al momento della prenotazione.",
+    "faq10Question": "L'hotel è adatto alle famiglie con bambini a Rimini?",
+    "faq10Answer": "Sì. Offriamo camere familiari e triple, un'area dedicata ai bambini e servizi pensati per chi sceglie la Riviera Romagnola in famiglia.",
+    "faq11Question": "Avete convenzioni con ristoranti e stabilimenti balneari?",
+    "faq11Answer": "Sì, sono attive convenzioni con ristoranti partner a Rimini e Miramare e con stabilimenti balneari nelle vicinanze, con condizioni riservate agli ospiti.",
+    "faq12Question": "Quanto dista il centro di Rimini, la Fiera e Riccione?",
+    "faq12Answer": "Da Miramare si raggiungono in auto il centro storico di Rimini, la zona fiera e Viale Ceccarini a Riccione in pochi minuti. La Metro Mare collega rapidamente la costa tra Rimini e Riccione."
   },
   "parking": {
     "title": "Parcheggio",
@@ -290,17 +327,17 @@
     "city": "47924 Miramare (RN), Italia",
     "phone": "333 9299408",
     "email": "onlyyoumisahotel@gmail.com",
-    "formTitle": "Richiedi Informazioni",
-    "name": "Nome e Cognome",
-    "emailField": "La tua Email",
-    "phoneField": "Telefono",
-    "message": "Messaggio",
-    "checkin": "Check-in",
-    "checkout": "Check-out",
-    "guests": "Ospiti",
-    "send": "Invia Richiesta",
+    "labelAddress": "Indirizzo",
+    "labelPhone": "Telefono",
+    "labelEmail": "Email",
+    "labelWhatsapp": "WhatsApp",
+    "whatsappHint": "Per richieste particolari, esigenze last minute o domande prima della prenotazione, scrivici su WhatsApp: ti rispondiamo al più presto.",
     "findUs": "Dove Trovarci",
-    "findUsText": "Siamo a Miramare di Rimini, a soli 150 metri dal mare. Facilmente raggiungibili dall'autostrada A14, dalla stazione ferroviaria di Rimini e dalla stazione di Miramare (fermata Miramare del treno e della Metro Mare)."
+    "findUsText": "Siamo a Miramare di Rimini, a soli 150 metri dal mare. Facilmente raggiungibili dall'autostrada A14, dalla stazione ferroviaria di Rimini e dalla stazione di Miramare (fermata Miramare del treno e della Metro Mare).",
+    "bookingKicker": "Prenotazioni",
+    "bookingTitle": "Prenota la tua camera online",
+    "bookingBody": "Prenota direttamente dal motore ufficiale TeamSystem Hospitality: disponibilità in tempo reale, tariffe trasparenti e conferma sicura. Per dubbi o richieste particolari scrivici su WhatsApp: siamo a tua disposizione.",
+    "bookingCta": "Vai al motore di prenotazione"
   },
   "footer": {
     "hotelName": "Hotel Dream",
@@ -357,6 +394,8 @@
     "back": "Indietro",
     "close": "Chiudi",
     "menu": "Menu",
-    "loading": "Caricamento..."
+    "loading": "Caricamento...",
+    "carouselPrev": "Foto precedente",
+    "carouselNext": "Foto successiva"
   }
 }

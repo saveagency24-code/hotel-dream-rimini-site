@@ -6,6 +6,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import Image from "next/image";
 import { useState, useEffect } from "react";
 import { trackConversion } from "@/lib/analytics";
+import BookingPortalLink from "./BookingPortalLink";
 
 const navItems = [
   { key: "offers", href: "/offerte" as const },
@@ -60,12 +61,12 @@ export default function Header() {
               <LanguageSwitcher />
             </div>
 
-            <Link
-              href="/contatti"
+            <BookingPortalLink
+              source="header_desktop_cta"
               className="hidden md:inline-flex text-white text-[11px] uppercase tracking-[0.2em] font-body border border-white/30 px-5 py-2.5 hover:bg-white hover:text-navy transition-all duration-300"
             >
-              {t("requestQuote")}
-            </Link>
+              {t("book")}
+            </BookingPortalLink>
 
             {/* Hamburger */}
             <button
@@ -144,17 +145,17 @@ export default function Header() {
             </nav>
 
             <div className="grid grid-cols-2 border-t border-white/30">
-              <Link
-                href="/contatti"
-                onClick={() => setMenuOpen(false)}
+              <BookingPortalLink
+                source="header_overlay_booking"
+                onNavigate={() => setMenuOpen(false)}
                 className="px-6 py-6 border-r border-white/30 text-center hover:bg-white/5 transition-colors duration-300 flex flex-col items-center justify-center"
               >
                 <svg className="w-5 h-5 mb-3 text-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9.5 3.75h5A1.75 1.75 0 0116.25 5.5v2.25H7.75V5.5A1.75 1.75 0 019.5 3.75z" />
                 </svg>
-                <p className="font-heading text-[clamp(1.2rem,2vw,1.8rem)] leading-none">{t("requestQuote")}</p>
-              </Link>
+                <p className="font-heading text-[clamp(1.2rem,2vw,1.8rem)] leading-none">{t("book")}</p>
+              </BookingPortalLink>
 
               <a
                 href="https://wa.me/393339299408"

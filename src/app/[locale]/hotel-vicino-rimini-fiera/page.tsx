@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Link } from "@/i18n/navigation";
 import { setRequestLocale } from "next-intl/server";
 import StructuredData from "@/components/seo/StructuredData";
 import { getBreadcrumbSchema } from "@/lib/geo";
-import { SITE_URL } from "@/lib/site";
+import { BOOKING_PORTAL_URL, SITE_URL } from "@/lib/site";
+import { seoForPath } from "@/lib/seo-metadata";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -18,7 +18,7 @@ const content = {
       "Alternativa smart: treno da Miramare verso Rimini e nodo fiera.",
       "Posizione ideale anche per Cosmoprof Bologna con appoggio su Rimini.",
     ],
-    cta: "Richiedi preventivo business",
+    cta: "Prenota il tuo soggiorno",
   },
   en: {
     title: "Hotel near Rimini Fiera",
@@ -30,7 +30,7 @@ const content = {
       "Smart option: train from Miramare to Rimini and fair area.",
       "Ideal base for Cosmoprof Bologna with Rimini stay strategy.",
     ],
-    cta: "Request business quote",
+    cta: "Book your stay",
   },
   de: {
     title: "Hotel nahe Rimini Fiera",
@@ -42,7 +42,7 @@ const content = {
       "Smart-Alternative: Zug von Miramare Richtung Rimini/Messebereich.",
       "Auch für Cosmoprof Bologna mit Übernachtung in Rimini geeignet.",
     ],
-    cta: "Business-Angebot anfragen",
+    cta: "Aufenthalt buchen",
   },
 } as const;
 
@@ -52,6 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${data.title} | Hotel Dream Rimini`,
     description: data.intro,
+    ...seoForPath("/hotel-vicino-rimini-fiera", locale),
   };
 }
 
@@ -81,12 +82,14 @@ export default async function RiminiFieraPage({ params }: Props) {
             </li>
           ))}
         </ul>
-        <Link
-          href="/contatti"
+        <a
+          href={BOOKING_PORTAL_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-3 bg-gold text-navy text-[11px] uppercase tracking-[0.2em] font-body px-8 py-3.5 hover:bg-gold-dark transition-colors duration-300"
         >
           {data.cta}
-        </Link>
+        </a>
       </div>
     </section>
   );

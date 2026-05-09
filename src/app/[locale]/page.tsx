@@ -2,11 +2,48 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import type { Metadata } from "next";
 import ScrollRevealCTA from "@/components/ScrollRevealCTA";
+import { BOOKING_PORTAL_URL } from "@/lib/site";
+import { seoForPath } from "@/lib/seo-metadata";
 
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const messages = (await import(`../../../messages/${locale}.json`)).default;
+  const meta = messages.meta;
+  const seo = seoForPath("/", locale);
+  return {
+    title: meta.title,
+    description: meta.description,
+    alternates: seo.alternates,
+    openGraph: {
+      ...seo.openGraph,
+      title: meta.title,
+      description: meta.description,
+      locale: locale === "it" ? "it_IT" : locale === "de" ? "de_DE" : "en_US",
+      type: "website",
+      siteName: "Hotel Dream Rimini",
+      images: [
+        {
+          url: "/images/hotel-esterno-notte.png",
+          width: 1200,
+          height: 630,
+          alt: "Hotel Dream Rimini",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      images: ["/images/hotel-esterno-notte.png"],
+    },
+  };
+}
 
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
@@ -201,6 +238,7 @@ function HomeContent() {
               { title: services("breakfastTitle"), desc: services("breakfastDesc") },
               { title: services("barTitle"), desc: services("barDesc") },
               { title: services("solariumTitle"), desc: services("solariumDesc") },
+              { title: services("kidsAreaTitle"), desc: services("kidsAreaDesc") },
               { title: services("parkingTitle"), desc: services("parkingDesc") },
             ].map((item) => (
               <div key={item.title} className="border border-white/10 bg-white/5 p-5 md:p-6">
@@ -247,15 +285,17 @@ function HomeContent() {
                   {offers("weekend")}
                 </h3>
                 <p className="text-gray text-sm mb-4 line-clamp-2">{offers("weekendDesc")}</p>
-                <Link
-                  href="/contatti"
+                <a
+                  href={BOOKING_PORTAL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-turquoise text-[11px] uppercase tracking-[0.2em] font-body group-hover:gap-3 transition-all duration-300"
                 >
-                  {common("readMore")}
+                  {common("bookNow")}
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
 
@@ -288,15 +328,17 @@ function HomeContent() {
                     {offers(key)}
                   </h3>
                   <p className="text-gray text-sm mb-4">{offers("comingSoonDesc")}</p>
-                  <Link
-                    href="/contatti"
+                  <a
+                    href={BOOKING_PORTAL_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-turquoise text-[11px] uppercase tracking-[0.2em] font-body group-hover:gap-3 transition-all duration-300"
                   >
-                    {common("readMore")}
+                    {common("bookNow")}
                     <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}

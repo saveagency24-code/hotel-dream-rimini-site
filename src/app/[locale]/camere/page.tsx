@@ -1,15 +1,20 @@
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
-import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { BOOKING_PORTAL_URL } from "@/lib/site";
+import { seoForPath } from "@/lib/seo-metadata";
 
 type Props = { params: Promise<{ locale: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const messages = (await import(`../../../../messages/${locale}.json`)).default;
-  return { title: messages.meta.roomsTitle, description: messages.meta.roomsDesc };
+  return {
+    title: messages.meta.roomsTitle,
+    description: messages.meta.roomsDesc,
+    ...seoForPath("/camere", locale),
+  };
 }
 
 export default async function RoomsPage({ params }: Props) {
@@ -103,15 +108,17 @@ function RoomsContent() {
                   ))}
                 </div>
 
-                <Link
-                  href="/contatti"
+                <a
+                  href={BOOKING_PORTAL_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 border border-navy text-navy text-[11px] uppercase tracking-[0.2em] font-body px-7 py-3 hover:bg-navy hover:text-white transition-all duration-300"
                 >
                   {t("requestInfo")}
                   <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </Link>
+                </a>
               </div>
             </div>
           ))}

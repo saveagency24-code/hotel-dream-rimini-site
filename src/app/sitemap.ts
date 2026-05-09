@@ -1,15 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
+import { getLocalizedPath } from "@/lib/routing-paths";
 import { LOCALES, SITE_URL, type Locale } from "@/lib/site";
-
-function getLocalizedPath(pathname: string, locale: Locale): string {
-  const mapping = routing.pathnames[pathname as keyof typeof routing.pathnames];
-
-  if (!mapping) return `/${locale}${pathname}`;
-  if (typeof mapping === "string") return `/${locale}${mapping}`;
-
-  return `/${locale}${mapping[locale] ?? pathname}`;
-}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const internalPaths = Object.keys(routing.pathnames);
