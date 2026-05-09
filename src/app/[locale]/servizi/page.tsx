@@ -10,7 +10,11 @@ import ServicePhotoCarousel from "@/components/ServicePhotoCarousel";
 
 type Props = { params: Promise<{ locale: string }> };
 
-const BREAKFAST_GALLERY_SRC = ["/images/sala-colazione.jpg"];
+const BREAKFAST_GALLERY_SRC = [
+  "/images/sala-colazione.jpg",
+  "/images/servizi/colazione/hotel-dream-rimini-hotel-esterno-07.jpg",
+  "/images/servizi/colazione/hotel-dream-rimini-hotel-esterno-05.jpg",
+];
 
 const BAR_GALLERY_SRC = Array.from({ length: 15 }, (_, i) => {
   const n = String(i + 1).padStart(2, "0");
