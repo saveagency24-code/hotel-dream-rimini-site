@@ -308,17 +308,10 @@ function ServicesContent({ locale }: { locale: string }) {
           <h2 className="font-heading text-white text-2xl md:text-4xl uppercase tracking-[0.1em] mb-12">
             {t("partners")}
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {[
-              "rossopomodoro" as const,
-              "purograno" as const,
-              "dallaLella" as const,
-              "amor" as const,
-            ].map((key) => (
-              <div key={key} className="border border-white/10 p-6 md:p-8 flex flex-col items-center justify-center hover:border-gold/40 transition-colors duration-300">
-                <p className="font-heading text-white text-sm md:text-base text-center">{t(key)}</p>
-              </div>
-            ))}
+          <div className="flex flex-wrap justify-center gap-4">
+            <div className="w-full max-w-sm border border-white/10 p-6 md:p-8 flex flex-col items-center justify-center hover:border-gold/40 transition-colors duration-300">
+              <p className="font-heading text-white text-sm md:text-base text-center">{t("purograno")}</p>
+            </div>
           </div>
         </div>
       </section>
