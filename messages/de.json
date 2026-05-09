@@ -100,7 +100,13 @@
     "newManagement": "Neue Leitung",
     "breakfastIncluded": "Frühstück Inklusive",
     "commonAreasTitle": "Lobby & Gemeinschaftsbereiche",
-    "commonAreasSubtitle": "Moderne Räume zum Entspannen während Ihres Aufenthalts"
+    "commonAreasSubtitle": "Ein Bildercollage unserer Bereiche: Lobby, Bar, Solarium, Kinderraum und Außenansichten. Moderne Räume zum Entspannen — weitere Fotos und Details auf der Seite Leistungen.",
+    "galleryLabelHall": "Lobby",
+    "galleryLabelBar": "Bar",
+    "galleryLabelSolarium": "Solarium",
+    "galleryLabelKids": "Kinderraum",
+    "galleryLabelExterior": "Außenansicht",
+    "galleryServicesLink": "Zu den Leistungen"
   },
   "rooms": {
     "title": "Zimmer",

@@ -100,7 +100,13 @@
     "newManagement": "Nuova Gestione",
     "breakfastIncluded": "Colazione Inclusa",
     "commonAreasTitle": "Hall e ambienti comuni",
-    "commonAreasSubtitle": "Spazi moderni dove rilassarti durante il soggiorno"
+    "commonAreasSubtitle": "Un collage degli spazi dell'hotel: hall, bar, solarium, sala bimbi e esterni. Ambienti moderni dove rilassarti durante il soggiorno — con approfondimenti e altre foto nella pagina Servizi.",
+    "galleryLabelHall": "Hall",
+    "galleryLabelBar": "Bar",
+    "galleryLabelSolarium": "Solarium",
+    "galleryLabelKids": "Sala bimbi",
+    "galleryLabelExterior": "Esterno",
+    "galleryServicesLink": "Apri la pagina Servizi"
   },
   "rooms": {
     "title": "Le Camere",

@@ -2,6 +2,8 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 import type { Metadata } from "next";
+import { Link } from "@/i18n/navigation";
+import { collageAspectClass, HOTEL_SPACES_COLLAGE } from "@/lib/hotel-spaces-collage";
 import { seoForPath } from "@/lib/seo-metadata";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -116,32 +118,49 @@ function HotelContent() {
         </div>
       </section>
 
-      {/* Hall & ambienti comuni */}
+      {/* Hall & ambienti comuni — collage hall, bar, solarium, sala bimbi, esterno */}
       <section className="py-16 lg:py-24 bg-white border-t border-gray-border">
         <div className="max-w-[1400px] mx-auto px-5 md:px-8">
           <h2 className="font-heading text-navy text-2xl md:text-4xl uppercase tracking-[0.1em] mb-4">
             {t("commonAreasTitle")}
           </h2>
-          <p className="text-gray text-base md:text-[17px] leading-[1.9] mb-10 max-w-2xl">{t("commonAreasSubtitle")}</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="relative aspect-[4/3] overflow-hidden">
-              <Image
-                src="/images/hotel-lobby-1.png"
-                alt=""
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover origin-center scale-[1.68]"
-              />
-            </div>
-            <div className="relative aspect-[4/3] overflow-hidden img-zoom">
-              <Image
-                src="/images/hotel-lobby-2.png"
-                alt=""
-                fill
-                sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover"
-              />
-            </div>
+          <p className="text-gray text-base md:text-[17px] leading-[1.9] mb-10 max-w-3xl">{t("commonAreasSubtitle")}</p>
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 [column-gap:0.875rem] md:[column-gap:1rem]">
+            {HOTEL_SPACES_COLLAGE.map((item, i) => (
+              <figure
+                key={`${item.src}-${i}`}
+                className="break-inside-avoid mb-4 rounded-sm border border-navy/10 overflow-hidden bg-navy/5 shadow-sm"
+              >
+                <div className={`relative w-full ${collageAspectClass(item.aspect)} img-zoom`}>
+                  <Image
+                    src={item.src}
+                    alt={t(item.labelKey)}
+                    fill
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    className="object-cover"
+                  />
+                  <div
+                    className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy/88 via-navy/30 to-transparent pt-10 pb-2.5 px-2.5 md:px-3"
+                    aria-hidden
+                  >
+                    <span className="font-heading text-[10px] md:text-[11px] uppercase tracking-[0.2em] text-white/95">
+                      {t(item.labelKey)}
+                    </span>
+                  </div>
+                </div>
+              </figure>
+            ))}
+          </div>
+          <div className="mt-10">
+            <Link
+              href="/servizi"
+              className="inline-flex items-center gap-2 border border-navy text-navy text-[11px] uppercase tracking-[0.2em] font-body px-6 py-3 hover:bg-navy hover:text-white transition-colors duration-300"
+            >
+              {t("galleryServicesLink")}
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

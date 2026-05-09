@@ -100,7 +100,13 @@
     "newManagement": "New Management",
     "breakfastIncluded": "Breakfast Included",
     "commonAreasTitle": "Lobby & common areas",
-    "commonAreasSubtitle": "Modern spaces to relax during your stay"
+    "commonAreasSubtitle": "A collage of our spaces: lobby, bar, solarium, kids' room and exteriors. Modern areas to relax during your stay — see the Services page for more photos and details.",
+    "galleryLabelHall": "Lobby",
+    "galleryLabelBar": "Bar",
+    "galleryLabelSolarium": "Solarium",
+    "galleryLabelKids": "Kids' room",
+    "galleryLabelExterior": "Exterior",
+    "galleryServicesLink": "View all services"
   },
   "rooms": {
     "title": "Rooms",
