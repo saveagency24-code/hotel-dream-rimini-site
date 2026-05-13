@@ -62,6 +62,7 @@ function HomeContent() {
   const offers = useTranslations("offers");
   const reviews = useTranslations("reviews");
   const common = useTranslations("common");
+  const faq = useTranslations("services");
 
   const reviewItems = [
     { author: reviews("review1Author"), text: reviews("review1Text") },
@@ -403,6 +404,48 @@ function HomeContent() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* ───── FAQ ───── */}
+      <section className="py-20 lg:py-28 bg-white border-t border-gray-border">
+        <div className="max-w-[1400px] mx-auto px-5 md:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-[280px_1fr] gap-12 lg:gap-20">
+            <div>
+              <p className="text-gold/80 text-[11px] uppercase tracking-[0.35em] font-body mb-4">FAQ</p>
+              <h2 className="font-heading text-navy text-3xl md:text-[2.5rem] uppercase tracking-[0.08em] leading-tight">
+                Domande Frequenti
+              </h2>
+            </div>
+            <div className="divide-y divide-navy/10 border-t border-navy/10">
+              {(["faq1Question","faq2Question","faq3Question","faq4Question","faq5Question","faq6Question"] as const).map((qKey, i) => {
+                const aKey = qKey.replace("Question","Answer") as "faq1Answer"|"faq2Answer"|"faq3Answer"|"faq4Answer"|"faq5Answer"|"faq6Answer";
+                return (
+                  <details key={qKey} className="group">
+                    <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-5 font-heading text-navy text-base md:text-lg outline-none transition-colors hover:text-gold [&::-webkit-details-marker]:hidden">
+                      <span>{faq(qKey)}</span>
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center border border-navy/15 text-gold transition-transform duration-300 group-open:rotate-180" aria-hidden>
+                        <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                    </summary>
+                    <div className="border-l-2 border-gold/60 pl-5 pb-5 pt-1 text-gray text-[14px] leading-[1.85]">
+                      {faq(aKey)}
+                    </div>
+                  </details>
+                );
+              })}
+            </div>
+          </div>
+          <div className="mt-10 lg:ml-[calc(280px+5rem)]">
+            <Link href="/servizi" className="inline-flex items-center gap-2 border border-navy text-navy text-[11px] uppercase tracking-[0.2em] font-body px-6 py-3 hover:bg-navy hover:text-white transition-colors duration-300">
+              {common("readMore")}
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={1.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
           </div>
         </div>
       </section>

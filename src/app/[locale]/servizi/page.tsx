@@ -253,11 +253,11 @@ function ServicesContent({ locale }: { locale: string }) {
               {t("allServicesTitle") ?? "I Nostri Servizi"}
             </h2>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-px bg-gray-border border border-gray-border">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 border-t border-l border-navy/10">
             {allServices.map(({ title, desc }) => (
               <div
                 key={title}
-                className="group bg-white p-7 md:p-8 flex flex-col gap-4 hover:bg-navy transition-colors duration-400 cursor-default"
+                className="group bg-white border-b border-r border-navy/10 p-7 md:p-8 flex flex-col gap-4 hover:bg-navy transition-colors duration-400 cursor-default"
               >
                 <span className="text-gold group-hover:text-gold/90 transition-colors duration-400">
                   {SERVICE_ICONS[title]}
