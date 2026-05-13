@@ -49,13 +49,15 @@ export default async function ServicesPage({ params }: Props) {
 
 const SERVICE_ICONS: Record<string, React.ReactNode> = {
   breakfastTitle: (
+    // Tazza di caffè con vapore e piattino
     <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.4} viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.5h18M6 13.5V6a1 1 0 011-1h4a1 1 0 011 1v7.5M9 19.5v-6M15 8h2a2 2 0 012 2v3.5M15 19.5v-8" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M18 8h1a4 4 0 010 8h-1M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8zm4-5c0 1.5 2 1.5 2 3m4-3c0 1.5 2 1.5 2 3" />
     </svg>
   ),
   barTitle: (
+    // Calice cocktail/vino
     <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.4} viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.3 24.3 0 014.5 0m0 0v5.714a2.25 2.25 0 001.357 2.059l.096.04A2.25 2.25 0 0117.25 13.5h.008M14.25 3.104c.251.023.501.05.75.082M5 14.5h14M5 14.5l-.75 5.25h15.5L19 14.5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M8 22h8M12 15v7M5 2h14l-4 9a5 5 0 01-10 0L5 2z" />
     </svg>
   ),
   solariumTitle: (
@@ -69,8 +71,9 @@ const SERVICE_ICONS: Record<string, React.ReactNode> = {
     </svg>
   ),
   parkingTitle: (
+    // Auto con ruote
     <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.4} viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M5 11l1.5-5h11L19 11M3 11h18v5a1 1 0 01-1 1H4a1 1 0 01-1-1v-5zm4 6.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm10 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3z" />
     </svg>
   ),
   wifiTitle: (
@@ -79,8 +82,9 @@ const SERVICE_ICONS: Record<string, React.ReactNode> = {
     </svg>
   ),
   beachTitle: (
+    // Ombrellone da spiaggia + onde
     <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.4} viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 0v9m0 0l6-3.5M12 12L6 8.5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M12 3C8.5 3 5.5 5.5 5.5 9h13C18.5 5.5 15.5 3 12 3zM12 9v10M9 19h6M2 17c1.5-2 3.5-2 5 0s3.5 2 5 0 3.5-2 5 0" />
     </svg>
   ),
   cleaningTitle: (
