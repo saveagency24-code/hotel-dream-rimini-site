@@ -137,7 +137,9 @@
     "amenityTV": "TV in room",
     "amenityWifi": "Free Wi-Fi",
     "amenityCleaning": "Daily cleaning",
-    "requestInfo": "Book online"
+    "requestInfo": "Book online",
+    "introText": "Every room is designed to offer you maximum comfort during your stay in Rimini. Carefully selected furnishings, full amenities and attention to detail that makes the difference.",
+    "allRoomsInclude": "Included in every room"
   },
   "breakfast": {
     "title": "Breakfast",

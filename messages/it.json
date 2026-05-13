@@ -137,7 +137,9 @@
     "amenityTV": "TV in camera",
     "amenityWifi": "Wi-Fi gratuito",
     "amenityCleaning": "Pulizia giornaliera",
-    "requestInfo": "Prenota online"
+    "requestInfo": "Prenota online",
+    "introText": "Ogni camera è pensata per offrirti il massimo comfort durante il tuo soggiorno a Rimini. Arredi curati, servizi completi e un'attenzione ai dettagli che fa la differenza.",
+    "allRoomsInclude": "Incluso in ogni camera"
   },
   "breakfast": {
     "title": "Colazione",
