@@ -11,8 +11,9 @@ import ServicePhotoCarousel from "@/components/ServicePhotoCarousel";
 type Props = { params: Promise<{ locale: string }> };
 
 const BREAKFAST_GALLERY_SRC = [
-  "/images/servizi/colazione/hotel-dream-rimini-hotel-esterno-07.jpg",
-  "/images/servizi/colazione/hotel-dream-rimini-hotel-esterno-05.jpg",
+  "/images/servizi/colazione/hotel-dream-rimini-servizi-colazione-01.jpg",
+  "/images/servizi/colazione/hotel-dream-rimini-servizi-colazione-02.jpg",
+  "/images/servizi/colazione/hotel-dream-rimini-servizi-colazione-03.jpg",
 ];
 
 const BAR_GALLERY_SRC = Array.from({ length: 15 }, (_, i) => {
